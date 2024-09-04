@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RocketTimeTable.LandingNewCoursePage"
+             Title="LandingNewCoursePage"
+             Background="#eaeaea">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.03*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.03*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.02*"/>
+            <RowDefinition Height="0.136*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.093*"/>
+            <RowDefinition Height="0.02*"/>
+        </Grid.RowDefinitions>
+        <Border StrokeShape="RoundRectangle 10,10,10,10" StrokeThickness="0"  Background="White" Grid.Row="1" Grid.Column="1" Padding="8,10,8,0">
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0" VerticalOptions="Center">
+                        <Border x:Name="crop_Boder" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30" StrokeThickness="2" Stroke="Black">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30,30,30,30" />
+                            </Border.StrokeShape>
+                            <Label x:Name="crop_Boder_Label" ClassId="1" Text="1" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                        </Border>
+                        <Label x:Name="crop_Label" Text="裁剪截图" FontSize="Caption" HorizontalTextAlignment="Center" IsVisible="true"></Label>
+                    </StackLayout>
+                    <StackLayout  Grid.Column="1" VerticalOptions="Center">
+                        <Border x:Name="course_Boder" Grid.Column="1" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30" StrokeThickness="2" Stroke="Black">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30,30,30,30" />
+                            </Border.StrokeShape>
+                            <Label x:Name="course_Boder_Label"  Text="2" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                        </Border>
+                        <Label x:Name="course_Label" Text="识别课程" FontSize="Caption" HorizontalTextAlignment="Center" IsVisible="false"></Label>
+                    </StackLayout>
+                    <StackLayout Grid.Column="2" VerticalOptions="Center">
+                        <Border x:Name="adjust_Boder" Grid.Column="1" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30" StrokeThickness="2" Stroke="Black">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30,30,30,30" />
+                            </Border.StrokeShape>
+                            <Label x:Name="adjust_Boder_Label" Text="3" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                        </Border>
+                        <Label x:Name="adjust_Label" Text="调整课程" FontSize="Caption" HorizontalTextAlignment="Center" IsVisible="false"></Label>
+                    </StackLayout>
+                    <StackLayout Grid.Column="3" VerticalOptions="Center">
+                        <Border x:Name="information_Boder" Grid.Column="1" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30" StrokeThickness="2" Stroke="Black">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30,30,30,30" />
+                            </Border.StrokeShape>
+                            <Label x:Name="information_Boder_Label" Text="4" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                        </Border>
+                        <Label x:Name="information_Label" Text="识别信息" FontSize="Caption" HorizontalTextAlignment="Center" IsVisible="false"></Label>
+                    </StackLayout>
+                    <StackLayout Grid.Column="4" VerticalOptions="Center">
+                        <Border x:Name="teacher_Boder" Grid.Column="1" HorizontalOptions="Center" HeightRequest="30" WidthRequest="30" StrokeThickness="2" Stroke="Black">
+                            <Border.StrokeShape>
+                                <RoundRectangle CornerRadius="30,30,30,30" />
+                            </Border.StrokeShape>
+                            <Label x:Name="teacher_Boder_Label" Text="5" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"></Label>
+                        </Border>
+                        <Label x:Name="teacher_Label" Text="识别教师名" FontSize="Caption" HorizontalTextAlignment="Center" IsVisible="false"></Label>
+                    </StackLayout>
+                </Grid>
+                <ProgressBar x:Name="progressBar" Grid.Column="1" Grid.Row="1"  Progress="0.2" ProgressColor="#FFBF00"></ProgressBar>
+            </StackLayout>
+        </Border>
+        <Border StrokeShape="RoundRectangle 10,10,10,10" StrokeThickness="0"  Background="White" Grid.Row="2" Grid.Column="1" Margin="0,10,0,0">
+            <ScrollView x:Name="scrollView" VerticalScrollBarVisibility="Always">
+                <StackLayout Margin="5">
+                    <Label Text="上传裁剪过的课程名截图" FontSize="18"></Label>
+
+                    <Border Margin="10" Background="#F6F6F6F6" HeightRequest="450">
+                        <Border.StrokeShape>
+                            <RoundRectangle CornerRadius="10,10,10,10" />
+                        </Border.StrokeShape>
+                    </Border>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                       
+                    </Grid>
+                    
+                </StackLayout>
+            </ScrollView>
+        </Border>
+        <Border StrokeShape="RoundRectangle 10,10,10,10" StrokeThickness="0"  Background="White" Grid.Row="3" Grid.Column="1" Margin="0,10,0,0">
+            <Grid Margin="8">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="quit_Button" Clicked="Quit_Button_Clicked"   BackgroundColor="#DCDCDC" Grid.Column="0" WidthRequest="80" Text="退出"  Padding="0"></Button>
+                <Button x:Name="black_Button" Clicked="Black_Button_Clicked" BackgroundColor="#FFBF00" Grid.Column="1" WidthRequest="80" Text="上一步"  Padding="0" IsVisible="false" ></Button>
+                <Button x:Name="next_Button" Clicked="Next_Button_Clicked"  BackgroundColor="#FFBF00" Grid.Column="2"  WidthRequest="80" Text="下一步"  Padding="0" ></Button>
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>

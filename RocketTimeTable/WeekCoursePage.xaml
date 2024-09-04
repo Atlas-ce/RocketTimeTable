@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RocketTimeTable.WeekCoursePage">
+    <ScrollView Grid.Row="1">
+        <Grid x:Name="WeekCourse_Grid">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="24"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="100"/>
+            </Grid.RowDefinitions>
+            <!--<Frame Grid.Column="0" BorderColor="#FFBF00"  BackgroundColor="#FFBF00" CornerRadius="3" Padding="0" Margin="1,0,1,0">
+                <Label Text="1" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            </Frame>
+            <Frame Grid.Column="1" BorderColor="#FFBF00"  BackgroundColor="#FFBF00" CornerRadius="3" Padding="0" Margin="1,0,1,0">
+                <Label Text="2" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            </Frame>
+            <Frame Grid.Column="2" BorderColor="#FFBF00"  BackgroundColor="#FFBF00" CornerRadius="3" Padding="0" Margin="1,0,1,0">
+                <Label Text="3" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            </Frame>
+            <Frame Grid.Column="3" BorderColor="#FFBF00"  BackgroundColor="#FFBF00" CornerRadius="3" Padding="0" Margin="1,0,1,0">
+                <Label Text="4" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            </Frame>
+            <Frame Grid.Column="4" BorderColor="#FFBF00"  BackgroundColor="#FFBF00" CornerRadius="3" Padding="0" Margin="1,0,1,0">
+                <Label Text="5" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            </Frame>
+           
+            <Frame Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" BorderColor="#FFBF00"  BackgroundColor="#FFBF00"  Margin="1,1,1,1" Padding="0">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="1,0,1,0">
+                    <Label VerticalOptions="Center" Text="软件工程"></Label>
+                    <Label VerticalOptions="Center"  Text="A6-103"></Label>
+                    <Label Text="唐晓军"></Label>
+                    <Label Text="9:10~"></Label>
+                    <Label Text="10:40"></Label>
+                </StackLayout>
+            </Frame>-->
+            <!--<AbsoluteLayout  Grid.Column="1" Grid.Row="1" HeightRequest="100">
+                <Label  Text="8:20" TextColor="#DCDCDC"  AbsoluteLayout.LayoutBounds="0.2,0.1" AbsoluteLayout.LayoutFlags="PositionProportional"></Label>
+                <Label Text="9:00     " TextColor="#DCDCDC"  AbsoluteLayout.LayoutBounds="0.4,0.9" AbsoluteLayout.LayoutFlags="PositionProportional" TextDecorations="Underline"></Label>
+            </AbsoluteLayout>
+            <AbsoluteLayout  Grid.Column="1" Grid.Row="2" HeightRequest="100">
+                <Label  Text="9:10" TextColor="#DCDCDC"  AbsoluteLayout.LayoutBounds="0.2,0.1" AbsoluteLayout.LayoutFlags="PositionProportional"></Label>
+                <Label Text="9:50     " TextColor="#DCDCDC"  AbsoluteLayout.LayoutBounds="0.4,0.9" AbsoluteLayout.LayoutFlags="PositionProportional" TextDecorations="Underline"></Label>
+            </AbsoluteLayout>-->
+            <!--<Frame Grid.Column="0" Grid.Row="2" Grid.RowSpan="2" BorderColor="#FFBF00"  BackgroundColor="#FFBF00"  Margin="1,1,1,1" Padding="0">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="1,0,1,0">
+                    <Label VerticalOptions="Center" Text="软件工程"></Label>
+                    <Label VerticalOptions="Center"  Text="A6-103"></Label>
+                    <Label Text="唐晓军"></Label>
+                    <Label Text="9:10~"></Label>
+                    <Label Text="10:40"></Label>
+                </StackLayout>
+            </Frame>-->
+        </Grid>
+    </ScrollView>
+</ContentView>

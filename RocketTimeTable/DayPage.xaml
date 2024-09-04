@@ -1,0 +1,117 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodel="clr-namespace:RocketTimeTable.ViewModel"
+             x:DataType="viewmodel:MainModel"
+             x:Class="RocketTimeTable.DayPage"
+             Title="DayPage"
+             Background="#eaeaea"
+             Shell.NavBarIsVisible="False">
+   
+    <Grid>
+        <Grid.GestureRecognizers>
+            <SwipeGestureRecognizer Direction="Right" Swiped="SwipeGestureRecognizer_Swiped_1"/>
+            <SwipeGestureRecognizer Direction="Left" Swiped="SwipeGestureRecognizer_Swiped"/>
+        </Grid.GestureRecognizers>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" TranslationX="400" x:Name="shadow" >
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,20">
+                <Label Text="明天" FontFamily="" FontSize="19" FontAttributes="Bold"></Label>
+            </StackLayout>
+            <Border HeightRequest="140" WidthRequest="280" Background="White" StrokeShape="RoundRectangle 20,20,20,20" Margin="0,0,0,20" Padding="0,0,15,0" StrokeThickness="0">
+                <StackLayout Margin="15,3,0,0">
+                    <Label Text="上午" FontSize="17" FontAttributes="Bold"></Label>
+                    <Border  HeightRequest="100" Margin="0,5,0,0" StrokeThickness="0">
+                        <Grid x:Name="TomorrowAM_Grid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="0.2*"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+                        </Grid>
+                    </Border>
+                </StackLayout>
+            </Border>
+            <Border HeightRequest="140" WidthRequest="280" Background="White" StrokeShape="RoundRectangle 20,20,20,20" Margin="0,0,0,20" Padding="0,0,15,0" StrokeThickness="0">
+                <StackLayout Margin="15,3,0,0">
+                    <Label Text="下午" FontSize="17" FontAttributes="Bold"></Label>
+                    <Border  HeightRequest="100" Margin="0,5,0,0" StrokeThickness="0">
+                        <Grid x:Name="TomorrowPM_Grid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="0.2*"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                    </Border>
+                </StackLayout>
+            </Border>
+            <Border  HeightRequest="140" WidthRequest="280" Background="White" StrokeShape="RoundRectangle 20,20,20,20" Margin="0,0,0,20" Padding="0,0,15,0" StrokeThickness="0">
+                <StackLayout Margin="15,3,0,0">
+                    <Label Text="晚上" FontSize="17" FontAttributes="Bold"></Label>
+                    <Border  HeightRequest="100" Margin="0,5,0,0" StrokeThickness="0">
+                        <Grid x:Name="TomorrowNighet_Grid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="0.2*"/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                    </Border>
+                </StackLayout>
+            </Border>
+        </StackLayout>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center" x:Name="Today_StackLayout">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0,0,0,20">
+                    <Label x:Name="WeekNumber_Label"  FontFamily="" FontSize="19" FontAttributes="Bold"></Label>
+                    <Label Text="—" FontFamily="" FontSize="19" FontAttributes="Bold"></Label>
+                    <Label x:Name="DayOfWeek_Label"  FontSize="19" FontAttributes="Bold"></Label>
+                </StackLayout>
+                <Border HeightRequest="140" WidthRequest="280" Background="White" StrokeShape="RoundRectangle 20,20,20,20" Margin="0,0,0,20" Padding="0,0,15,0" StrokeThickness="0">
+                    <StackLayout Margin="15,3,0,0">
+                        <Label Text="上午" FontSize="17" FontAttributes="Bold"></Label>
+                        <Border  HeightRequest="100" Margin="0,5,0,0" StrokeThickness="0">
+                            <Grid x:Name="AM_Grid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                            </Grid>
+                        </Border>
+                    </StackLayout>
+                </Border>
+                <Border HeightRequest="140" WidthRequest="280" Background="White" StrokeShape="RoundRectangle 20,20,20,20" Margin="0,0,0,20" Padding="0,0,15,0" StrokeThickness="0">
+                    <StackLayout Margin="15,3,0,0">
+                        <Label Text="下午" FontSize="17" FontAttributes="Bold"></Label>
+                        <Border  HeightRequest="100" Margin="0,5,0,0" StrokeThickness="0">
+                            <Grid x:Name="PM_Grid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                            </Grid>
+                        </Border>
+                    </StackLayout>
+                </Border>
+                <Border HeightRequest="140" WidthRequest="280" Background="White" StrokeShape="RoundRectangle 20,20,20,20" Margin="0,0,0,20" Padding="0,0,15,0" StrokeThickness="0">
+                    <StackLayout Margin="15,3,0,0">
+                        <Label Text="晚上" FontSize="17" FontAttributes="Bold"></Label>
+                        <Border  HeightRequest="100" Margin="0,5,0,0" StrokeThickness="0">
+                            <Grid x:Name="Nighet_Grid">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                            </Grid>
+                        </Border>
+                    </StackLayout>
+                </Border>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RocketTimeTable.WeekPage"
+             Title="WeekPage"
+             Shell.NavBarIsVisible="False"
+             Background="#eaeaea">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.02*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.02*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.03*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.03*"/>
+        </Grid.ColumnDefinitions>
+        <Border StrokeShape="RoundRectangle 10,10,10,10" StrokeThickness="0"  Background="White" Grid.Row="1" Grid.Column="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.07*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" Margin="14,0,10,0">
+                    <Label x:Name="WeekCount_Label" FontSize="21" FontAttributes="Bold"></Label>
+                </StackLayout>
+                <Frame x:Name="Week_Frame" CornerRadius="10"  Grid.Row="1" Margin="3,0,3,3" Padding="5,5,5,5" BorderColor="White">
+                    <ScrollView Grid.Row="1">
+                        <Grid x:Name="WeekCourse_Grid">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="24"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                            </Grid.RowDefinitions>
+                        </Grid>
+                    </ScrollView>
+                </Frame>
+            </Grid>
+        </Border>
+    </Grid>
+</ContentPage>
